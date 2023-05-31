@@ -1,0 +1,168 @@
+:root{
+  --darkRed: #560B0E;
+  --red: #E4000E;
+  --black: #1c1c1a;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: 'ethnocentricregular';
+  src: url('ethnocentric_rg-webfont.woff2') format('woff2'),
+       url('ethnocentric_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body{
+  margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+}
+h1, h2, h3{
+  font-family: ethnocentricregular
+
+}
+  header nav{
+    
+    background-color: var(--darkRed);
+    height: 55%;
+  }
+  #links a:visited { 
+    text-decoration: none; 
+    color: white; 
+   }
+  .nav-container{
+    font-family: ethnocentricregular;
+    font-size: 20px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #logo{
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  #links a{
+    margin: 15px;
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  #links a:hover{
+    color: var(--red);
+  }
+  
+  @media (max-width: 500px) {
+    #links {
+      display: none;
+    }
+  }
+  
+  #separator{
+    display: inline-block;
+    height: 16px;
+    width: 1px;
+    background: currentColor;
+  }
+  
+  #menu {
+    display: none;
+  }
+  
+  #menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 500px) {
+    #menu {
+      display: block;
+    }
+  }
+  
+  .button{
+    border: 3px solid var(--darkRed);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  h1{
+      font-size: 72px;
+      margin: 10px0;
+  }
+  p{
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      margin: 10px;
+  }
+  .userInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .avatar {
+    width: 200px;
+    height:200px;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 30px;
+    background-position: center;
+    background-size: cover;
+}
+
+  .likes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .likes-container{
+    width: 100%;
+    /* padding: 20px; */
+  }
+  
+  .like{
+    margin: 20px;
+  }
+  .like p{
+    font-family: ethnocentricregular;
+    margin: 0;
+  }
+  .heart{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .exerciseElement p{
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+  }
+  .exercise:hover{
+    color: var(--red);
+    cursor: pointer;
+  }
+  
+
+  @media (max-width: 500px) {
+    .container{
+      height: auto;
+      flex-direction: column;
+    }
+  }

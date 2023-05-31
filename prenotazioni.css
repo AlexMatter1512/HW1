@@ -1,0 +1,135 @@
+:root{
+    --darkRed: #560B0E;
+    --red: #E4000E;
+    --black: #1c1c1a;
+    --white: #ffffff;
+}
+
+@font-face {
+    font-family: 'ethnocentricregular';
+    src: url('ethnocentric_rg-webfont.woff2') format('woff2'),
+         url('ethnocentric_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--white);
+    font-family: ethnocentricregular;
+}
+#header {
+    font-family: ethnocentricregular;
+    font-size: 20px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+#separator{
+    display: inline-block;
+    height: 16px;
+    width: 1px;
+    background: currentColor;
+}
+#navigation a{
+    margin: 15px;
+    text-decoration: none;
+    color: var(--white);
+}
+#navigation a:visited { 
+    text-decoration: none; 
+    color: white; 
+}
+#navigation a:hover{
+    color: var(--red);
+}
+
+#booking-container {
+    margin-bottom: 20px;
+}
+#lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.list {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.available {
+    margin: 10px;
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--black);
+    border: 3px solid var(--darkRed);
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.available:hover {
+    background-color: var(--darkRed);
+    border-color: var(--red);
+}
+
+.booked {
+    background-color: var(--darkRed);
+    color: var(--white);
+}
+.booked:hover {
+    cursor: default;
+    border-color: var(--darkRed);
+}
+.bookedByMe {
+    background-color: green;
+    color: var(--white);
+}
+.bookings{
+    font-size: 15px;
+}
+#confirmation-container {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#confirmation-message {
+    font-weight: bold;
+    color: green;
+}
+
+@media screen and (max-width: 600px) {
+    #header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #lists {
+        flex-direction: column;
+    }
+    .list {
+        width: 90vw;
+        max-width: 90vw;
+    }
+    
+}
